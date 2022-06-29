@@ -7,9 +7,9 @@ public interface Poligono {
 	Ogni classe può avere un insieme di propri attributi, costruttori e anche altri metodi oltre a quelli dell’interfaccia.
 	Creare una classe Main di test in cui generare delle istanze dei poligoni e testare i metodi di calcolo del perimetro e dell’area. */
 	
-	public void calcolaPerimetro();
+	public double calcolaPerimetro();
 	
-	public void calcolaArea();
+	public double calcolaArea();
 	
 
 }

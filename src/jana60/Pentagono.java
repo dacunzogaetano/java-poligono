@@ -3,32 +3,32 @@ package jana60;
 public class Pentagono implements Poligono{
 	
 	//attributi
-	int lato;
-	int altezza;
+	double lato;
+	double altezza;
 	
 	//costruttori
 	
-	public Pentagono(int lato, int altezza) {
+	public Pentagono(double lato, double altezza) {
 		validaLato(lato, altezza);
 		this.lato = lato;
 		this.altezza = altezza;
 	}
 	
 	//metodo per validare i dati
-			private void validaLato(int lato, int altezza) throws IllegalArgumentException {
+			private void validaLato(double lato, double altezza) throws IllegalArgumentException {
 				if (lato < 0 || altezza <0)
 					throw new IllegalArgumentException("Inserire solo numeri maggiori di 0");
 			}
 
 	@Override
-	public void calcolaPerimetro() {
-		System.out.println(lato*5);
+	public double calcolaPerimetro() {
+		return lato*5;
 		
 	}
 
 	@Override
-	public void calcolaArea() {
-		System.out.println((2*lato * altezza) / 2);
+	public double calcolaArea() {
+		return (2*lato*altezza)/2;
 		
 	}
 

@@ -3,31 +3,31 @@ package jana60;
 public class Triangolo implements Poligono {
 	
 	//attributi
-	private int lato;
-	private int altezza;
+	private double lato;
+	private double altezza;
 	
 	//costruttori
-	public Triangolo(int lato, int altezza) {
+	public Triangolo(double lato, double altezza) {
 		validaLato(lato, altezza);
 		this.lato = lato;
 		this.altezza = altezza;
 	}
 	
 	//metodo per validare i dati
-		private void validaLato(int lato, int altezza) throws IllegalArgumentException {
+		private void validaLato(double lato, double altezza) throws IllegalArgumentException {
 			if (lato < 0 || altezza <0)
 				throw new IllegalArgumentException("Inserire solo numeri maggiori di 0");
 		}
 
 	@Override
-	public void calcolaPerimetro() {
-		System.out.println(lato*3);
+	public double calcolaPerimetro() {
+		return lato*3;
 		
 	}
 
 	@Override
-	public void calcolaArea() {
-		System.out.println(lato*altezza/2);
+	public double calcolaArea() {
+		return lato*altezza/2;
 		
 	}
 
